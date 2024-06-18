@@ -1,0 +1,30 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const Title = styled.h1`
+margin-bottom: 20px;
+`;
+
+const PTag = styled.p`
+margin-top: 10px;
+font-size:15px;
+font-style: normal;
+color:#00000;
+`;
+
+
+const AboutUs: React.FC = () => {
+    return (
+    <>
+    <Title>About Us</Title>
+    <PTag>Kenan Foundation Asia believes in a world where everyone has the right to build a better life for themselves, 
+        their family, and their community. Every day, we are working in Thailand and the region to inspire students,
+        develop skilled people, and grow strong leaders by empowering them with the knowledge, technology,
+        and skills necessary for a better future. Whether it’s an entrepreneur, a small business owner,
+        a teacher, a student, a community leader, or a non-profit manager, we conduct tailored, engaging
+        activities to train, coach and equip them so they can achieve their dreams.</PTag>
+    </>
+);
+};
+
+export default AboutUs;
