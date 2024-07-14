@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 
 import authReducer from './Slices/authSlice';
 import profileReducer from './Slices/profileSlice';
+import memberList from './Slices/MemberlistSlice';
 
 const persistConfig = {
     key: 'root',
@@ -15,6 +16,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
     auth: authReducer,
     profile: profileReducer,
+    memberlist:memberList,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -22,8 +24,8 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = configureStore({
     reducer: persistedReducer,
 });
-
 export const persistor = persistStore(store);
+
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
